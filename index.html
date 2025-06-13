@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Premium Portfolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animate on Scroll CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #f9fafb;
+      color: #111827;
+      scroll-behavior: smooth;
+    }
+    h1,h2,h3 {
+      font-family: 'Playfair Display', serif;
+    }
+    nav a {
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #7c3aed; /* Indigo-600 */
+    }
+    .btn-primary {
+      @apply bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold py-3 px-7 rounded-lg shadow-lg transition duration-300 ease-in-out;
+    }
+    .btn-primary:hover {
+      @apply bg-gradient-to-r from-purple-700 to-indigo-700 shadow-xl;
+    }
+    .section-padding {
+      padding: 6rem 1.5rem;
+    }
+    /* Floating labels for contact */
+    .floating-label {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .floating-label input,
+    .floating-label textarea {
+      width: 100%;
+      padding: 1rem 1rem 0.25rem;
+      border: 2px solid #ddd;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      background: transparent;
+      outline: none;
+      color: #111827;
+    }
+    .floating-label label {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1rem;
+      color: #9ca3af; /* Gray-400 */
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: white;
+      padding: 0 0.25rem;
+    }
+    .floating-label input:focus,
+    .floating-label textarea:focus {
+      border-color: #7c3aed;
+    }
+    .floating-label input:focus + label,
+    .floating-label input:not(:placeholder-shown) + label,
+    .floating-label textarea:focus + label,
+    .floating-label textarea:not(:placeholder-shown) + label {
+      top: -0.5rem;
+      font-size: 0.75rem;
+      color: #7c3aed;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="fixed w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <a href="#" class="text-2xl font-bold text-indigo-700 font-serif">Suffa Studio</a>
+      <div class="space-x-6 text-gray-700 font-semibold hidden md:flex">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-white via-indigo-50 to-purple-50 pt-24 px-6" data-aos="fade-up" data-aos-duration="1500">
+    <h1 class="text-5xl md:text-6xl font-bold max-w-4xl leading-tight mb-6 drop-shadow-lg">
+      Crafting Elegant, High-Converting Websites That Elevate Your Brand
+    </h1>
+    <p class="text-lg md:text-xl text-gray-700 max-w-3xl mb-10 drop-shadow-sm">
+      Bespoke static sites built with precision, style, and strategy — designed to turn visitors into loyal customers.
+    </p>
+ <div class="text-center mt-8">
+  <a href="packages.html" class="inline-block text-white text-lg font-semibold bg-gradient-to-r from-purple-600 via-indigo-600 to-purple-700 px-8 py-3 rounded-full shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out">
+     Explore Packages
+  </a>
+</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section-padding max-w-5xl mx-auto text-center" data-aos="fade-right" data-aos-duration="1200">
+    <h2 class="text-4xl font-semibold mb-8">About Me</h2>
+    <p class="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed tracking-wide">
+      I’m passionate about creating digital experiences that combine sophistication with strategy.  
+      Every website is more than just a project — it’s an investment in your brand’s future success.
+      My focus is on delivering pixel-perfect, high-performance sites that impress visitors and convert them into customers.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section-padding bg-indigo-50">
+    <div class="max-w-6xl mx-auto text-center" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+      <h2 class="text-4xl font-semibold mb-12">What I Offer</h2>
+      <div class="grid md:grid-cols-3 gap-12 text-gray-700 px-4 md:px-0">
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="400">
+          <h3 class="text-2xl font-semibold mb-4">Landing Page Design</h3>
+          <p>Custom landing pages crafted to launch your product with style and high conversion in mind.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="600">
+          <h3 class="text-2xl font-semibold mb-4">Conversion-Focused Blogs</h3>
+          <p>Minimalist and elegant blogs designed to engage readers and build your authority.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 transform hover:scale-105 transition-transform duration-300" data-aos="zoom-in" data-aos-delay="800">
+          <h3 class="text-2xl font-semibold mb-4">Bespoke Static Sites</h3>
+          <p>Hand-coded, fast, and secure static websites with zero backend clutter and a polished look.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+            <!-- SKILLS -->
+<section id="skills" class="section-padding bg-white text-center" data-aos="fade-up" data-aos-duration="1200">
+  <h2 class="text-4xl font-semibold mb-10">What I Bring to the Table</h2>
+  <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-12">
+    I specialize in building custom, high-performance websites using modern web technologies.
+    From sleek, responsive layouts to advanced animations, I focus on delivering outstanding user experiences.
+  </p>
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-lg font-medium text-gray-800">
+    <div class="p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fab fa-html5 text-3xl text-indigo-600 mb-2"></i>
+      <div>HTML5</div>
+    </div>
+    <div class="p-4 bg-purple-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fab fa-css3-alt text-3xl text-purple-600 mb-2"></i>
+      <div>CSS3</div>
+    </div>
+    <div class="p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fab fa-js-square text-3xl text-yellow-500 mb-2"></i>
+      <div>JavaScript (ES6+)</div>
+    </div>
+    <div class="p-4 bg-purple-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fab fa-react text-3xl text-cyan-500 mb-2"></i>
+      <div>React.js</div>
+    </div>
+    <div class="p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fas fa-laptop-code text-3xl text-indigo-700 mb-2"></i>
+      <div>UI/UX Design</div>
+    </div>
+    <div class="p-4 bg-purple-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fas fa-magic text-3xl text-purple-600 mb-2"></i>
+      <div>Modern Animations</div>
+    </div>
+    <div class="p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fas fa-mobile-alt text-3xl text-indigo-600 mb-2"></i>
+      <div>Responsive Design</div>
+    </div>
+    <div class="p-4 bg-purple-50 rounded-lg shadow-sm hover:shadow-md transition">
+      <i class="fab fa-github text-3xl text-gray-800 mb-2"></i>
+      <div>Git & GitHub</div>
+    </div>
+  </div>
+</section>
+
+
+         <!-- FAQs -->
+<section id="faqs" class="section-padding max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+  <h2 class="text-4xl font-semibold mb-8 text-center">Frequently Asked Questions</h2>
+  <div class="space-y-6 text-gray-700 text-lg">
+
+    <details class="border rounded-md p-4">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center">
+        Are your websites custom-built or template-based?
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2">All my websites are 100% custom-designed and hand-coded to suit your brand identity and goals. I don’t use generic templates — every project is unique.</p>
+    </details>
+
+    <details class="border rounded-md p-4">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center">
+        How long does it take to complete a website?
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2">Most projects are completed within 1 to 3 weeks, depending on the scope and the number of revisions needed.</p>
+    </details>
+
+    <details class="border rounded-md p-4">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center">
+        What’s included in your premium packages?
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2">Each package includes a custom design, responsive layout, SEO best practices, performance optimization, and post-launch support — all tailored to boost your brand’s performance.</p>
+    </details>
+
+    <details class="border rounded-md p-4">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center">
+        Can I request changes after the site is delivered?
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2">Yes, I offer up to 7 days of unlimited revisions after delivery to make sure you’re fully satisfied with the result.</p>
+    </details>
+
+    <details class="border rounded-md p-4">
+      <summary class="font-semibold cursor-pointer flex justify-between items-center">
+        Do you offer ongoing support or maintenance?
+        <svg class="w-5 h-5 transition-transform duration-300 transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </summary>
+      <p class="mt-2">Yes, I provide 30 days of free post-launch support. Ongoing maintenance and updates can be arranged through a custom support plan.</p>
+    </details>
+
+  </div>
+     
+</section>
+    <!-- CONTACT -->
+<section id="contact" class="section-padding bg-gradient-to-r from-indigo-600 to-purple-600 text-white max-w-3xl mx-auto rounded-xl p-10 shadow-lg" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="400">
+  <h2 class="text-4xl font-semibold mb-6 text-center">Get In Touch</h2>
+  <p class="mb-8 text-center text-lg">Have a project in mind or just want to say hi? Feel free to connect through any of the platforms below.</p>
+
+  <!-- Social Links -->
+  <div class="flex justify-center space-x-6 text-3xl">
+    <a href="https://www.linkedin.com/in/shanza-aqueel" target="_blank" aria-label="LinkedIn" class="text-white hover:text-indigo-200 transition duration-300">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/suffa_studio/#" target="_blank" aria-label="Instagram" class="text-white hover:text-indigo-200 transition duration-300">
+      <i class="fab fa-instagram"></i>
+    </a>
+    </a>
+    <a href="mailto:shanzaaqueel@gmail.com" aria-label="Email" class="text-white hover:text-indigo-200 transition duration-300">
+      <i class="fas fa-envelope"></i>
+    </a>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="py-8 text-center text-gray-600 bg-gray-100 mt-20">
+    &copy; 2025 Your Name. All rights reserved.
+  </footer>
+
+  <!-- AOS Animate on Scroll JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: false,
+      mirror: true,
+      duration: 800,
+      easing: 'ease-in-out',
+    });
+
+    // Accordion arrow toggle rotation
+    document.querySelectorAll('details').forEach((detail) => {
+      detail.addEventListener('toggle', (e) => {
+        const svg = e.target.querySelector('summary svg');
+        if (e.target.open) {
+          svg.style.transform = 'rotate(180deg)';
+        } else {
+          svg.style.transform = 'rotate(0deg)';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
+

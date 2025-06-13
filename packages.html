@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Design Packages | Suffa Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.5;
+    }
+    h1, h2, h3 {
+      font-family: 'Merriweather', serif;
+      color: #2a2a72;
+      margin-bottom: 0.6em;
+    }
+    h1 {
+      font-size: 2.8rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #3a0ca3;
+      margin: 3rem auto 1.5rem;
+      max-width: 1280px;
+      padding-left: 1rem;
+    }
+    .container {
+      max-width: 1280px;
+      margin: auto;
+      padding: 2rem 1rem 4rem;
+    }
+    .packages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding-bottom: 1rem;
+    }
+    .package {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(58,12,163,0.12);
+      padding: 2rem;
+      flex: 1 1 320px;
+      max-width: 320px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .package.visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .package:hover {
+      box-shadow: 0 20px 40px rgba(58,12,163,0.3);
+      transform: translateY(-8px) scale(1.05);
+    }
+    .package-title {
+      color: #3a0ca3;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.8rem;
+    }
+    .package-desc {
+      font-weight: 600;
+      color: #444;
+      margin-bottom: 1.4rem;
+      min-height: 70px;
+    }
+    ul.features {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1.6rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    ul.features li {
+      margin-bottom: 0.7rem;
+      position: relative;
+      padding-left: 24px;
+    }
+    ul.features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #3a0ca3;
+      font-weight: 700;
+    }
+    .price {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #2a2a72;
+      margin-bottom: 1.2rem;
+    }
+    button.cta {
+      background: #3a0ca3;
+      color: white;
+      border: none;
+      padding: 0.9rem 0;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(58,12,163,0.25);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    button.cta:hover {
+      background: #2a2275;
+      box-shadow: 0 8px 20px rgba(42,34,117,0.4);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 6px 14px rgba(58, 12, 163, 0.25);
+      }
+      50% {
+        box-shadow: 0 10px 24px rgba(58, 12, 163, 0.5);
+      }
+    }
+    .note {
+      font-size: 0.85rem;
+      color: #666;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .packages {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 1rem;
+      }
+      .package {
+        flex: 0 0 280px;
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Choose the Package That Boosts Your Business</h1>
+
+    <!-- Custom Category -->
+    <h2>Custom Packages</h2>
+    <div class="packages" id="custom-packages">
+      <section class="package" id="starter-launch-page">
+        <h3 class="package-title">Starter Launch Page</h3>
+        <p class="package-desc">Clean, static 1-page site for fast online presence.</p>
+        <ul class="features">
+          <li>1 custom static HTML page</li>
+          <li>Responsive design (mobile-friendly)</li>
+          <li>Basic SEO (meta tags, title, favicon)</li>
+          <li>Contact form (non-dynamic)</li>
+          <li>Brand styling (colors, fonts, logo)</li>
+          <li>2 revision rounds</li>
+          <li>Delivery in 5–7 business days</li>
+        </ul>
+        <div class="price">£550</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Starter Launch Page')">Launch Now</button>
+      </section>
+
+      <section class="package" id="essential-presence-site">
+        <h3 class="package-title">Essential Presence Site</h3>
+        <p class="package-desc">Professional 3-page website to showcase your services.</p>
+        <ul class="features">
+          <li>Up to 3 custom responsive pages</li>
+          <li>Modern, mobile-friendly design</li>
+          <li>Contact form with basic spam protection</li>
+          <li>Basic SEO setup & page speed optimization</li>
+          <li>Brand colors, logo, and font styling</li>
+          <li>3 revision rounds</li>
+          <li>Delivery in 7–10 business days</li>
+        </ul>
+        <div class="price">£1,050</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Essential Presence Site')">Get Online</button>
+      </section>
+
+      <section class="package" id="growth-site-bundle">
+        <h3 class="package-title">Growth Site Bundle</h3>
+        <p class="package-desc">Comprehensive 7-page website for growing businesses.</p>
+        <ul class="features">
+          <li>Up to 7 custom responsive pages</li>
+          <li>Modern design with branded visuals</li>
+          <li>Contact & lead capture forms</li>
+          <li>SEO setup + Google Analytics</li>
+          <li>Email integration (e.g., Mailchimp)</li>
+          <li>4 revision rounds</li>
+          <li>Delivery in 10–14 business days</li>
+        </ul>
+        <div class="price">£1,800</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Growth Site Bundle')">Start Growing</button>
+      </section>
+    </div>
+
+    <!-- Premium Category -->
+    <h2>Premium Packages</h2>
+    <div class="packages" id="premium-packages">
+      <section class="package" id="business-booster">
+        <h3 class="package-title">Business Booster</h3>
+        <p class="package-desc">Custom 1-page website focused on fast launch & conversion.</p>
+        <ul class="features">
+          <li>Responsive, modern design</li>
+          <li>SEO & Google Analytics setup</li>
+          <li>Favicon, brand colors & font styling</li>
+          <li><strong>Unlimited revisions (7 days)</strong></li>
+          <li>Messaging-based onboarding guidance</li>
+          <li>Email support for 2 weeks</li>
+          <li>3 post-launch tweaks (within 14 days)</li>
+          <li>Free marketing checklist PDF</li>
+        </ul>
+        <div class="price">£900</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Business Booster')">Get Started</button>
+      </section>
+
+      <section class="package" id="audience-amplifier">
+        <h3 class="package-title">Audience Amplifier</h3>
+        <p class="package-desc">Multi-page site + messaging support to grow your brand.</p>
+        <ul class="features">
+          <li>Up to 5 custom conversion-focused pages</li>
+          <li>Branding & UX consultation</li>
+          <li>Advanced SEO & form integrations</li>
+          <li>Email automation (e.g., Mailchimp)</li>
+          <li><strong>Unlimited revisions (10 days)</strong></li>
+          <li>Messaging strategy sessions (2 included)</li>
+          <li>Animated UI elements included</li>
+          <li>Post-launch performance insights</li>
+        </ul>
+        <div class="price">£2,700</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Audience Amplifier')">Level Up</button>
+      </section>
+
+      <section class="package" id="market-leader">
+        <h3 class="package-title">Market Leader</h3>
+        <p class="package-desc">High-end custom site + automation tools for scale.</p>
+        <ul class="features">
+          <li>10+ page website with unique animations</li>
+          <li>Full branding & UX + conversion flows</li>
+          <li>CRM integration & marketing funnels</li>
+          <li>Lead quizzes, booking tools, forms</li>
+          <li><strong>Unlimited revisions (14 days)</strong></li>
+          <li>Weekly messaging check-ins (up to 4)</li>
+          <li>3-month VIP support via message</li>
+          <li>Quarterly growth report & roadmap</li>
+        </ul>
+        <div class="price">£5,500</div>
+        <button class="cta" onclick="confirmAndOpenInstagram('Market Leader')">Contact Me</button>
+      </section>
+    </div>
+
+    <p class="note">All communication is message-based — flexible, time-zone friendly, and always documented for clarity.</p>
+  </div>
+
+  <script>
+    function revealPackages() {
+      const packages = document.querySelectorAll('.package');
+      const windowBottom = window.innerHeight + window.scrollY;
+      packages.forEach(pkg => {
+        const pkgTop = pkg.offsetTop + pkg.clientHeight / 4;
+        if (windowBottom > pkgTop && !pkg.classList.contains('visible')) {
+          pkg.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealPackages);
+    window.addEventListener('load', revealPackages);
+
+    function confirmAndOpenInstagram(packageName) {
+      const instaURL = 'https://www.instagram.com/suffa_studio/';
+      if(confirm(`Open Instagram to request the "${packageName}" package?`)) {
+        window.open(instaURL, '_blank');
+        alert(`Please send a direct message on Instagram requesting the "${packageName}" package.`);
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
